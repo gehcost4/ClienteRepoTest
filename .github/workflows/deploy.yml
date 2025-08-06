@@ -1,0 +1,20 @@
+name: Deploy FTP (Simulado)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Simulando deploy via FTP
+        run: |
+          echo "Iniciando deploy fictício via FTP..."
+          sleep 3
+          echo "Deploy fictício finalizado com sucesso!"
